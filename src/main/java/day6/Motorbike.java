@@ -1,4 +1,4 @@
-package day5;
+package day6;
 
 public class Motorbike {
     private String model;
@@ -21,5 +21,18 @@ public class Motorbike {
 
     public int getYear() {
         return year;
+    }
+
+    public void info() {
+        System.out.println("Это мотоцикл");
+    }
+
+    int yearDifference(int inputYear) {
+        int differenceM = year - inputYear;
+        if (differenceM < 0) {
+           differenceM = inputYear - year;
+        }
+        System.out.println(differenceM);
+        return differenceM;
     }
 }

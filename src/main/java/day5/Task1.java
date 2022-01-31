@@ -6,8 +6,10 @@ public class Task1 {
         car1.setModel("Focus");
         car1.setColor("red,");
         car1.setYear(2014);
-        car1.presentation();
+        System.out.println("Ford "+ car1.getModel()+" Color "+ car1.getColor()+" year "+ car1.getYear());
+        }
+
 
 
     }
-}
+
