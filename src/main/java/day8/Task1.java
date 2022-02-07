@@ -18,6 +18,6 @@ public class Task1 {
         System.out.println(sb);
         long stopTime2 = System.currentTimeMillis();
         System.out.println("Длительность работы в мс.:" + (stopTime2-startTime2));
-
     }
+
 }
