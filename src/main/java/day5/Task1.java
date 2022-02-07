@@ -2,14 +2,13 @@ package day5;
 
 public class Task1 {
     public static void main(String[] args) {
-        Car car1 = new Car();
-        car1.setModel("Focus");
-        car1.setColor("red,");
-        car1.setYear(2014);
-        System.out.println("Ford "+ car1.getModel()+" Color "+ car1.getColor()+" year "+ car1.getYear());
+        Car car = new Car();
+        car.setModel("Mondeo");
+        car.setColor("Red");
+        car.setYear(2014);
+
+        System.out.println("Это Ford "+car.getModel()+", color "+ car.getColor()+", год выпуска "+ car.getYear());
+
         }
-
-
-
     }
 

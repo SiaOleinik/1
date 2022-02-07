@@ -1,4 +1,4 @@
-package day6;
+package day8;
 
 public class Airplane {
     private String manufacturer;
@@ -38,12 +38,20 @@ public class Airplane {
         this.fuel = 0;
 
     }
-    void info () {
-        System.out.println("Изготовитель: "+manufacturer+", год выпуска: "+year+", длина: "+length+
-                ", вес: "+weight+", количество топлива в баке: "+fuel);
+
+    public String toString() {
+        return "Изготовитель: " + manufacturer + ", год выпуска: " + year + ", длина: " + length +
+                ", вес: " + weight;
+
     }
-    public int fillUp(int n){
-        fuel=+n;
+
+    void info() {
+        System.out.println("Изготовитель: " + manufacturer + ", год выпуска: " + year + ", длина: " + length +
+                ", вес: " + weight + ", количество топлива в баке: " + fuel);
+    }
+
+    public int fillUp(int n) {
+        fuel = +n;
         return fuel;
     }
 

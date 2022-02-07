@@ -3,42 +3,32 @@ package day6;
 import java.util.Random;
 
 public class Teacher {
-    private String teachName;
+    private String teachersName;
     private String subject;
+    Random ran = new Random();
 
-    public Teacher(String teachName, String subject) {
-        this.teachName = teachName;
+    public Teacher(String teachersName, String subject) {
+        this.teachersName = teachersName;
         this.subject = subject;
     }
 
-    public void setTeachName(String teachName) {
-        this.teachName = teachName;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public void evaluate(String stName) {
-        String stScore = null;
-        Random random = new Random();
-        int score = random.nextInt(4) + 2;
-        switch (score) {
+    public void evaluate(String student) {
+        int grade = ran.nextInt(4) + 2;
+        String stGrade;
+        switch (grade) {
             case 2:
-                stScore = "неудовлетворительно";
+                stGrade = "Неудовлетворительно";
                 break;
             case 3:
-                stScore = "удовлетворительно";
+                stGrade = "Удовлетворительно";
                 break;
             case 4:
-                stScore = "хорошо";
+                stGrade = "Хорошо";
                 break;
-            case 5:
-                stScore = "отлично";
-                break;
-            //default:
+            default:
+                stGrade = "Отлично";
         }
-
-        System.out.println("Преподаватель " + teachName + " оценил студента " + stName + " по предмету " + subject + " на оценку " + stScore);
+        System.out.println("Преподаватель " + teachersName + " оценил студента с именем " + student + " по предмету " + subject + " на оценку " + stGrade);
     }
+//47 строка разобраться почему нельзя заменить student на getStName
 }

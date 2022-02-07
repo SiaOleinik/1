@@ -5,34 +5,37 @@ public class Car {
     private String color;
     private int year;
 
-    public void setModel(String newModel){
-        model = newModel;
-    }
-    public String getModel(){
+    public String getModel() {
         return model;
     }
-    public void setColor(String newColor){
-        color = newColor;
+
+    public void setModel(String model) {
+        this.model = model;
     }
-    public String getColor(){
+
+    public String getColor() {
         return color;
     }
-    public void setYear(int newYear){
-        year = newYear;
+
+    public void setColor(String color) {
+        this.color = color;
     }
-    public int getYear(){
+
+    public int getYear() {
         return year;
     }
-    public void info(){
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    void info() {
         System.out.println("Это автомобиль");
     }
-    int yearDifference (int inputYear){
-        int difference = inputYear - year;
-        if(difference<0){
-            difference = year - inputYear;
-        }
-        System.out.println(difference);
-        return difference;
+
+    public int yearDifference(int inputYear) {
+        return inputYear - year;
     }
 
 }
+

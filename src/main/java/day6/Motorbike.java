@@ -15,7 +15,7 @@ public class Motorbike {
         return model;
     }
 
-    public String getColor() {
+    public String getColour() {
         return color;
     }
 
@@ -23,16 +23,17 @@ public class Motorbike {
         return year;
     }
 
-    public void info() {
+    void info() {
         System.out.println("Это мотоцикл");
     }
 
-    int yearDifference(int inputYear) {
-        int differenceM = year - inputYear;
-        if (differenceM < 0) {
-           differenceM = inputYear - year;
-        }
-        System.out.println(differenceM);
-        return differenceM;
+    public int yearDifference(int inputYear) {
+        return Math.abs(inputYear - year);
+
+
     }
 }
+
+
+
+
