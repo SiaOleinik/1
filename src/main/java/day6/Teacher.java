@@ -12,7 +12,7 @@ public class Teacher {
         this.subject = subject;
     }
 
-    public void evaluate(String student) {
+    public void evaluate(Student student) {
         int grade = ran.nextInt(4) + 2;
         String stGrade;
         switch (grade) {
@@ -28,7 +28,8 @@ public class Teacher {
             default:
                 stGrade = "Отлично";
         }
-        System.out.println("Преподаватель " + teachersName + " оценил студента с именем " + student + " по предмету " + subject + " на оценку " + stGrade);
+
+        System.out.println("Преподаватель " + this.teachersName + " оценил студента с именем " + student.getStName() + " по предмету " + this.subject + " на оценку " + stGrade);
     }
-//47 строка разобраться почему нельзя заменить student на getStName
+
 }

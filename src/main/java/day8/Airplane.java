@@ -38,12 +38,12 @@ public class Airplane {
         this.fuel = 0;
 
     }
+
     public String toString() {
-        return "Изготовитель: "+ manufacturer + ", год выпуска: " + year + ", длина: " + length +
-         ", вес: " + weight;
+        return "Изготовитель: " + manufacturer + ", год выпуска: " + year + ", длина: " + length +
+                ", вес: " + weight;
 
     }
-
 
 
     void info() {
@@ -51,9 +51,8 @@ public class Airplane {
                 ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 
-    public int fillUp(int n) {
-        fuel = +n;
-        return fuel;
+    public void fillUp(int n) {
+        fuel = + n;
     }
 
 }

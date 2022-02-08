@@ -5,7 +5,7 @@ import java.util.Random;
 public class Player {
     public static final int MAX_STAMINA = 100;
     public static final int MIN_STAMINA = 0;
-    public static int countPlayers = 0;
+    private static int countPlayers = 0;
     private int stamina;
 
     public static int getCountPlayers() {
@@ -23,17 +23,14 @@ public class Player {
         }
     }
 
-    public int run() {
-        while (true) {
-            if (stamina > MIN_STAMINA) {
-                stamina = stamina - 1;
-                System.out.println(getStamina());
-            } else {
-                countPlayers--;
-                return getCountPlayers();
-            }
+    public void run() {
+        if (stamina == MIN_STAMINA) {
+            return;
         }
-
+        stamina--;
+        if (stamina == MIN_STAMINA) {
+            countPlayers--;
+        }
     }
 
     public static void info() {
